@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Grupo</title>
+    <link rel="preload" href="img/PantallaEquipo2.jpg" as="image">
+    <link rel="preload" href="img/PantallaEquipoFinal.jpg" as="image">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="juego-container" style="background-image: url('img/PantallaEquipo1.jpg');">
+        <div id="btn-order" class="boton-invisible" onclick="irPantalla2()"></div>
+        <div id="btn-brisa" class="boton-invisible" onclick="mostrarPregunta()"></div>
+
+        <div id="modal-inicio" class="modal-ff9">
+            <p>Agrega un personaje a tu equipo</p>
+            <div class="opciones">
+                <span onclick="cerrarModalInicio()">Aceptar</span>
+            </div>
+        </div>
+
+        <div id="modal-pregunta-1" class="modal-ff9">
+            <p>¿Estás seguro de querer añadir a Brisa al grupo?</p>
+            <div class="opciones">
+                <span onclick="abrirSegundaPregunta()">Sí</span>
+                <span onclick="cerrarModal('modal-pregunta-1')">No</span>
+            </div>
+        </div>
+
+        <div id="modal-pregunta-2" class="modal-ff9">
+            <p>Esto hará que estén en una relación<br>¿Deseas continuar?</p>
+            <div class="opciones">
+                <span onclick="finalizarMagia()">Sí</span>
+                <span onclick="pantallaFin()">No</span>
+            </div>
+        </div>
+
+        <div id="modal-exito" class="modal-ff9">
+            <p>¡Ahora están en una relación!</p>
+            <div class="opciones">
+                <span onclick="cerrarModal('modal-exito')">Aceptar</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="pantalla-game-over" class="pantalla-negra">
+        <p>FIN</p>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
