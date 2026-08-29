@@ -1,1 +1,97 @@
+body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #000; 
+    color: white; 
+    font-family: sans-serif; 
+}
 
+#juego-container { 
+    position: relative; 
+    width: 95vw; 
+    max-width: 1400px; 
+    aspect-ratio: 1820 / 1085.14; 
+    background-size: 100% 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.boton-invisible { 
+    position: absolute; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+
+.boton-invisible:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+}
+
+#btn-order { 
+    top: 45%; 
+    right: 2%; 
+    width: 27%; 
+    height: 9%; 
+}
+
+#btn-brisa { 
+    top: 41%; 
+    left: 48%; 
+    width: 9%; 
+    height: 19%; 
+    display: none; 
+}
+
+.modal-ff9 {
+    display: none; 
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border: 3px solid #ccc; 
+    border-radius: 5px; 
+    padding: 20px; 
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    font-size: 1.2rem;
+}
+
+#modal-inicio, #modal-pregunta-1, #modal-pregunta-2, #modal-exito {
+    background-image: url('../img/FondoDialogo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.opciones span { 
+    display: block; 
+    margin: 15px; 
+    font-weight: bold;
+    cursor: pointer; 
+}
+
+.opciones span:hover { 
+    color: #c2a70d;
+}
+
+.pantalla-negra {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', serif;
+    font-size: 5rem;
+    letter-spacing: 10px;
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+}
